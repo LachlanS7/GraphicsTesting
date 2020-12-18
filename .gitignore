@@ -1,0 +1,4 @@
+cmake-build-debug
+CMake-build
+bin
+vendor/glad
