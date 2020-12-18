@@ -1,12 +1,15 @@
 #include "Display.h"
 
+void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
+    glViewport(0, 0, width, height);
+}
+
 Display::Display(int width, int height, std::string &name) {
 
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_SAMPLES, 8);
 
     m_window = glfwCreateWindow(width, height, name.c_str(), nullptr, nullptr);
 
@@ -16,10 +19,11 @@ Display::Display(int width, int height, std::string &name) {
     }
 
     glfwMakeContextCurrent(m_window);
+    glfwSetFramebufferSizeCallback(m_window, framebuffer_size_callback);
 
     glfwSwapInterval(1);
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    if (!gladLoadGL())
     {
         std::cout << "ERROR: Failed to initialize GLAD" << std::endl;
     }
@@ -28,7 +32,6 @@ Display::Display(int width, int height, std::string &name) {
 }
 
 void Display::draw(MeshManager &meshManager) const {
-/*
     auto sp = meshManager.getShaderProgram();
     sp->use();
 
@@ -43,20 +46,19 @@ void Display::draw(MeshManager &meshManager) const {
             glBindVertexArray(mesh->getVAO());
             glUniformMatrix4fv(modelLoc, 1, GL_FALSE, mesh->getModelMatrix());
 
-            glDrawElements(GL_TRIANGLES, mesh->vertexCount(), GL_FLOAT, nullptr);
+            glDrawArrays(GL_TRIANGLES, 0, mesh->vertexCount());
         }
-    }*/
+    }
 }
 
 void Display::update(MeshManager &meshManager) {
 
-    //glfwMakeContextCurrent(m_window);
+    processInput(m_window);
 
     glClear(GL_COLOR_BUFFER_BIT);
 
-    //draw(meshManager);
+    draw(meshManager);
 
-    processInput(m_window);
     glfwSwapBuffers(m_window);
     glfwPollEvents();
 }
@@ -66,6 +68,7 @@ void Display::makeContext() const {
 }
 
 void Display::setClearColour(float R, float G, float B, float A) const {
+    glfwMakeContextCurrent(m_window);
     glClearColor(R, G, B, A);
 }
 

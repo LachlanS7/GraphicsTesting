@@ -10,5 +10,5 @@ out vec4 col;
 void main()
 {
     col = aCol;
-    gl_Position = view * model * vec4(aPos.x, aPos.y, aPos.z, 1.0);
+    gl_Position = view * model * vec4(aPos, 1.0);
 }

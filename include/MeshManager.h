@@ -24,5 +24,5 @@ public:
 private:
     glm::mat4 m_viewMatrix = glm::mat4(1.0f);
     std::vector<Mesh*> m_meshes = {new Mesh};
-    ShaderProgram *m_shaderProgram;
+    ShaderProgram *m_shaderProgram = new ShaderProgram();
 };

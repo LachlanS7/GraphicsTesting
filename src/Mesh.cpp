@@ -17,17 +17,17 @@ void Mesh::fillBuffers(const Vertex *vertices, const unsigned int *indices, unsi
                        unsigned int indicesSize) {
 
     for (int i = 0; i < verticesSize; i++) {
-        m_vertices[7*i  ] = (vertices + i)->x;
-        m_vertices[7*i+1] = (vertices + i)->y;
-        m_vertices[7*i+2] = (vertices + i)->z;
-        m_vertices[7*i+3] = (vertices + i)->r;
-        m_vertices[7*i+4] = (vertices + i)->g;
-        m_vertices[7*i+5] = (vertices + i)->b;
-        m_vertices[7*i+6] = (vertices + i)->a;
+        m_vertices.push_back((vertices + i)->x);
+        m_vertices.push_back((vertices + i)->y);
+        m_vertices.push_back((vertices + i)->z);
+        m_vertices.push_back((vertices + i)->r);
+        m_vertices.push_back((vertices + i)->g);
+        m_vertices.push_back((vertices + i)->b);
+        m_vertices.push_back((vertices + i)->a);
     }
 
     for (int i = 0; i < indicesSize; i++) {
-        m_indices[i] = *(indices+i);
+        m_indices.push_back(*(indices+i));
     }
 
     genBuffers();
@@ -51,25 +51,25 @@ unsigned int Mesh::getVAO() const {
 }
 
 unsigned int Mesh::vertexCount() const {
-    return m_indices.size();
+        return m_indices.size();
 }
 
 void Mesh::genBuffers() {
     glGenVertexArrays(1, &m_VAO);
     glGenBuffers(1, &m_VBO);
-    glGenBuffers(1, &m_VAO);
+    glGenBuffers(1, &m_EBO);
 
     glBindVertexArray(m_VAO);
     glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_EBO);
 
     glBufferData(GL_ARRAY_BUFFER, m_vertices.size() * sizeof(double), m_vertices.data(), GL_STATIC_DRAW);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size() * sizeof(int), m_indices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size() * sizeof(double), m_indices.data(), GL_STATIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_DOUBLE, GL_FALSE, 7*sizeof(double), (void*)0);
     glEnableVertexAttribArray(0);
 
-    glVertexAttribPointer(1, 4, GL_DOUBLE, GL_FALSE, 7*sizeof(double), (void*)4);
+    glVertexAttribPointer(1, 4, GL_DOUBLE, GL_FALSE, 7*sizeof(double), (void*)(3 * sizeof(double)));
     glEnableVertexAttribArray(1);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);

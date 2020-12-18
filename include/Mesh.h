@@ -22,8 +22,8 @@ private:
     void fillBuffers(const Vertex *vertices, const unsigned int *indices, unsigned int verticesSize, unsigned int indicesSize);
     void genBuffers();
 
-    std::vector<double> m_vertices = {0};
-    std::vector<unsigned int> m_indices = {0};
+    std::vector<double> m_vertices;
+    std::vector<double> m_indices;
     glm::mat4 m_modelMatrix = glm::mat4(1.0f);
     bool m_active = true;
 

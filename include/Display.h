@@ -33,7 +33,7 @@ public:
     KeyState checkKey(int key) const;
 
 private:
-    GLFWwindow *m_window;
+    GLFWwindow *m_window = nullptr;
     int m_width{}, m_height{};
     std::unordered_map<int, KeyState> m_keyMap;
 

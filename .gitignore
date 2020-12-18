@@ -1,6 +1,3 @@
 cmake-build-debug
 CMake-build
 bin
-vendor/glad
-vendor/glfw/
-vendor/glm/
