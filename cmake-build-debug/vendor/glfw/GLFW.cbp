@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="GLFW"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\vendor\;CMake Files\vendor\glfw\;CMake Files\vendor\glfw\CMake\;CMake Files\vendor\glfw\src\;CMake Files\vendor\glad\;CMake Files\vendor\glm\;CMake Files\vendor\glm\glm\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw">
+				<Option output="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add option="-D_UNICODE"/>
+					<Add option="-DUNICODE"/>
+					<Add option="-DWINVER=0x0501"/>
+					<Add directory="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/include"/>
+					<Add directory="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/include"/>
+					<Add directory="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glad/include"/>
+					<Add directory="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src"/>
+					<Add directory="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/Makefile&quot;  VERBOSE=1 glfw"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw/fast">
+				<Option output="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add option="-D_UNICODE"/>
+					<Add option="-DUNICODE"/>
+					<Add option="-DWINVER=0x0501"/>
+					<Add directory="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/include"/>
+					<Add directory="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/include"/>
+					<Add directory="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glad/include"/>
+					<Add directory="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src"/>
+					<Add directory="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/Makefile&quot;  VERBOSE=1 glfw/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/cmake-build-debug/vendor/glfw/src/glfw_config.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/include/GLFW/glfw3.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/include/GLFW/glfw3native.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/egl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/egl_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/input.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/internal.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/mappings.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/osmesa_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/osmesa_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/vulkan.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/wgl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/wgl_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/win32_init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/win32_joystick.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/win32_joystick.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/win32_monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/win32_platform.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/win32_thread.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/win32_time.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/win32_window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\glfw\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/CMake/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\vendor\glfw\CMake\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/CMake/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\vendor\glfw\CMake\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/CMake/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\vendor\glfw\CMake\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\glfw\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\vendor\glfw\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glad/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\glad\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\glm\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/vendor/glm/glm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\glm\glm\"/>
+		</Unit>
+		<Unit filename="C:/Users/Lachlan/Desktop/dev/C++/GraphicsTesting/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
