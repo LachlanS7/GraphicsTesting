@@ -45,8 +45,7 @@ void Display::draw(MeshManager &meshManager) const {
         if(mesh->isActive()) {
             glBindVertexArray(mesh->getVAO());
             glUniformMatrix4fv(modelLoc, 1, GL_FALSE, mesh->getModelMatrix());
-
-            glDrawArrays(GL_TRIANGLES, 0, mesh->vertexCount());
+            glDrawElements(GL_TRIANGLES, mesh->vertexCount(), GL_UNSIGNED_INT, 0);
         }
     }
 }

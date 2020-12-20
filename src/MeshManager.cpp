@@ -3,12 +3,8 @@
 
 MeshManager::MeshManager() = default;
 
-void MeshManager::updateView(glm::mat4 viewMatrix) {
-    m_viewMatrix = viewMatrix;
-}
-
 const float *MeshManager::getViewMatrixPtr() {
-    return glm::value_ptr(m_viewMatrix);
+    return glm::value_ptr(*m_viewMatrix);
 }
 
 void MeshManager::updateShaderProgram(ShaderProgram *shaderProgram) {
@@ -20,14 +16,14 @@ ShaderProgram *MeshManager::getShaderProgram() {
 }
 
 void MeshManager::addMesh(Mesh *mesh) {
-    m_meshes[0] = (mesh); //TODO: change this to be correct
+    m_meshes.push_back(mesh);
 }
 
 Mesh * MeshManager::getMesh(unsigned int position) {
     return m_meshes[position];
 }
 
-glm::mat4 &MeshManager::getViewMatrix() {
+glm::mat4 *MeshManager::getViewMatrix() {
     return m_viewMatrix;
 }
 

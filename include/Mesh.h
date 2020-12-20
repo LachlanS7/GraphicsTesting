@@ -23,7 +23,7 @@ private:
     void genBuffers();
 
     std::vector<double> m_vertices;
-    std::vector<double> m_indices;
+    std::vector<int> m_indices;
     glm::mat4 m_modelMatrix = glm::mat4(1.0f);
     bool m_active = true;
 

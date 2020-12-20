@@ -54,7 +54,11 @@ unsigned int Mesh::vertexCount() const {
         return m_indices.size();
 }
 
+#include <iostream>
+
+
 void Mesh::genBuffers() {
+
     glGenVertexArrays(1, &m_VAO);
     glGenBuffers(1, &m_VBO);
     glGenBuffers(1, &m_EBO);
@@ -65,7 +69,7 @@ void Mesh::genBuffers() {
 
     glBufferData(GL_ARRAY_BUFFER, m_vertices.size() * sizeof(double), m_vertices.data(), GL_STATIC_DRAW);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size() * sizeof(double), m_indices.data(), GL_STATIC_DRAW);
-
+    
     glVertexAttribPointer(0, 3, GL_DOUBLE, GL_FALSE, 7*sizeof(double), (void*)0);
     glEnableVertexAttribArray(0);
 

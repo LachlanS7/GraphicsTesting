@@ -27,12 +27,13 @@ int main() {
 
     MeshManager meshManager;
 
-    Vertex v1(-0.5, -0.5, 1, 1, 0, 0, 1);
-    Vertex v2( 0.5, -0.5, 1, 1, 0, 0, 1);
-    Vertex v3( 0.0,  0.5, 1, 1, 0, 0, 1);
+    Vertex v1(-0.5, -0.5, 1, 1, 0, 0, 1); //Bottom left
+    Vertex v2( 0.5, -0.5, 1, 1, 0, 0, 1); //Bottom right
+    Vertex v3( 0.5,  0.5, 1, 1, 0, 0, 1); //Top right
+    Vertex v4(-0.5,  0.5, 1, 1, 0, 0, 1); //Top left
 
-    std::vector<Vertex> v = {v1, v2, v3};
-    std::vector<unsigned int> i = {0, 1, 2};
+    std::vector<Vertex> v = {v1, v2, v3, v4};
+    std::vector<unsigned int> i = {0, 1, 2, 0, 2, 3};
 
     Mesh *m1 = new Mesh(&v, &i, true);
     meshManager.addMesh(m1);
@@ -40,14 +41,11 @@ int main() {
     meshManager.updateShaderProgram(shaderProgram);
 
 
-
-
-
     // ----------------------- Linear Algebra! --------------------
 
-    //glm::mat4 view = glm::mat4(1.0);
-    //meshManager.updateView(view);
-    //view = glm::perspective(glm::radians(45.0f), (float)(window.getWidth()) / (float)(window.getHeight()), 0.1f, 100.0f);
+    auto *view = meshManager.getViewMatrix();
+    *view = glm::translate(*view, glm::vec3(0.0f, 0.5f, 0.0f));
+    *view = glm::rotate(*view, glm::radians(45.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 
     // ------------------------- Draw Loop -------------------------
 
